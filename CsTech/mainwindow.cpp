@@ -99,7 +99,7 @@ void MainWindow::slot_OpenFileDialogAndReadSelectedFile()
 
 	QFile file(filePath);
 
-    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+    if (!file.open(QIODevice::ReadWrite | QIODevice::Text)) {
 		QMessageBox::information(0, "error", file.errorString());
 		return;
 	}
